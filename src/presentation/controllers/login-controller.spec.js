@@ -1,3 +1,4 @@
+const MissingParamError = require("../../utils/errors/missing-param-error.js");
 const LoginController = require("./login-controller.js");
 
 describe('Login Controller', () => {
@@ -12,6 +13,7 @@ describe('Login Controller', () => {
 
     const httpResponse = sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(400)
+    expect(httpResponse.body).toEqual(new MissingParamError('email'))
   })
 
   test('should return 400 if no password is provided', () => {
@@ -25,6 +27,7 @@ describe('Login Controller', () => {
 
     const httpResponse = sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(400)
+    expect(httpResponse.body).toEqual(new MissingParamError('password'))
   })
 
   test('should return 500 if no httpRequest is provided', () => {
