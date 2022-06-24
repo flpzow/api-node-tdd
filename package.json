@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/flpzow/api-node-tdd/issues"
   },
-  "homepage": "https://github.com/flpzow/api-node-tdd#readme"
+  "homepage": "https://github.com/flpzow/api-node-tdd#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.7.1"
+  }
 }
